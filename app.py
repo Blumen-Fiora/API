@@ -49,6 +49,6 @@ def get_data():
         "user_data": "Hier sind deine geheimen Blumen-Fiora Infos"
     }), 200
 
-if __name__ == "__main__":
-    # Port 5000 muss mit deiner nginx.conf übereinstimmen
-    app.run(host="0.0.0.0", port=5000)
+# if __name__ == "__main__":
+#     # Port 5000 muss mit deiner nginx.conf übereinstimmen
+#     app.run(host="0.0.0.0", port=5000)
