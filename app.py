@@ -40,6 +40,15 @@ def protected():
     current_user = get_jwt_identity()
     return jsonify(logged_in_as=current_user, message="Willkommen im sicheren Bereich!"), 200
 
+@app.route('/data', methods=['GET'])
+@jwt_required()
+def get_data():
+    # Diese Funktion wird aufgerufen, wenn GET /data kommt
+    return jsonify({
+        "message": "Erfolgreich angemeldet!",
+        "user_data": "Hier sind deine geheimen Blumen-Fiora Infos"
+    }), 200
+
 if __name__ == "__main__":
     # Port 5000 muss mit deiner nginx.conf übereinstimmen
     app.run(host="0.0.0.0", port=5000)
