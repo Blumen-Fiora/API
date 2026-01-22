@@ -14,7 +14,7 @@ jwt = JWTManager(app)
 
 # Test-Datenbank (In-Memory)
 users = {
-    "admin": "geheim1234"
+    "admin": "geheim12345"
 }
 
 @app.route('/', methods=['GET'])
